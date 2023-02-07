@@ -7,7 +7,7 @@ git clean -fxd
 
 # copy folder over
 cp -rf ../website/dist/* .
-#cp ../website/CNAME .
+cp ../website/CNAME .
 
 git add .
 git commit -m "Added commit"
