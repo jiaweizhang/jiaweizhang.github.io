@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@/layouts/Base";
+import PostPreview from "@/components/blog/PostPreview";
+import SocialList from "@/components/SocialList";
+import { sortMDByDate } from "@/utils";
+
+const MAX_POSTS = 25;
+const allPosts = await getCollection("post");
+const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
+---
+
+<PageLayout meta={{ title: "Home" }}>
+	<section>
+		<h1 class="title mb-6">Hi, I'm Jiawei!</h1>
+		<p class="mb-4">
+			Outdoorsman on weekends, engineering manager on weekdays, and ponderer in evenings. 
+		</p>
+		<p class="mb-4">
+			The details tasted in life fade over time. This site serves to preserve memories, experiences, and interesting thoughts that I'm especially fond of. 
+		</p>
+		<SocialList />
+	</section>
+	<section aria-label="Blog post list" class="mt-16">
+		<h2 class="title mb-4 text-xl">Writings</h2>
+		<p class="mb-4">
+			For the best reading experience, click the theme toggle to be engulfed by a sea of green - the best color.
+		</p>
+		<ul class="space-y-4 sm:space-y-2">
+			{
+				allPostsByDate.map((p) => (
+					<li class="flex flex-col gap-x-2 sm:flex-row">
+						<PostPreview post={p} />
+					</li>
+				))
+			}
+		</ul>
+	</section>
+</PageLayout>

@@ -1,0 +1,32 @@
+---
+import PageLayout from "@/layouts/Base";
+import { Image } from "@astrojs/image/components";
+
+const meta = {
+	title: "About",
+	description: "I'm a starter theme for Astro.build",
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-6">
+		<h1 class="title">Me</h1>
+		<p>
+			I’ve always wondered what the qualifications for writing an autobiography were 
+			- specifically, one that others would actually bother to read. Perhaps a reasonable 
+			proxy for having met the qualifications is like another arbitrary success marker of mine - 
+			having one’s own Wikipedia article, ideally built on one’s virtue and honor, rather than 
+			from infamy. It’s always strange writing about yourself. There’s a certain degree of 
+			vulnerability, perhaps due to the lack of anonymity that’s typically granted when writing 
+			about others. Anyways. Today, let’s dissect me, Jiawei, and try to understand the person, 
+			their circumstances, how they came to be, and what they hope to become. 
+		</p>
+		<p>Written, but needs to be reviewed:</p>
+		<ul class="list-inside list-disc">
+			<li>Youth</li>
+			<li>College</li>
+			<li>Google</li>
+		</ul>
+		
+	</div>
+</PageLayout>
