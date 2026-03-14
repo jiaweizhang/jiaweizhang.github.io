@@ -1,0 +1,22 @@
+{
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"stylelint.validate": ["css", "less", "postcss", "astro"],
+	"stylelint.snippet": ["css", "less", "postcss", "astro"],
+	"[markdown]": {
+		"editor.wordWrap": "on",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.markdownlint": "explicit"
+		}
+	},
+	"prettier.documentSelectors": ["**/*.astro"],
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"astro", // Enable .astro
+		"typescript", // Enable .ts
+		"typescriptreact"
+	]
+}
